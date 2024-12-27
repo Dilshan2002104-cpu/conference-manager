@@ -1,0 +1,19 @@
+.session-description {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.session-description h4 {
+  color: #2d3436;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.session-description p {
+  color: #636e72;
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin: 0;
+}

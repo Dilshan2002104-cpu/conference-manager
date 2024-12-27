@@ -1,0 +1,19 @@
+.speaker-bio {
+  text-align: center;
+  margin: 15px 0;
+  padding: 0 10px;
+}
+
+.speaker-title {
+  color: #00b894;
+  font-size: 0.95em;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.speaker-description {
+  color: #636e72;
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin: 0;
+}

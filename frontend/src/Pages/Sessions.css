@@ -1,0 +1,356 @@
+.sessions-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body{
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+  min-height: 100vh;
+}
+.content-container{
+  margin-top: 55px;
+}
+
+.sessions-container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.track-filter {
+  margin-bottom: 20px;
+}
+
+.track-filter select {
+  padding: 8px;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.session-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-container{
+  margin-top: 55px;
+}
+
+.session-header {
+  margin-bottom: 15px;
+}
+
+.session-header h2 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.track-tag {
+  background: #e0e0e0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.session-info p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.capacity-info {
+  margin-top: 15px;
+  color: #444;
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.register-button:hover {
+  background: #0056b3;
+}
+
+.register-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.speaker-section {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  gap: 12px;
+}
+
+.speaker-image-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.speaker-placeholder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.user-icon {
+  width: 24px;
+  height: 24px;
+  color: #666;
+}
+
+.speaker-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.speaker-image.loaded {
+  opacity: 1;
+}
+
+.speaker-info {
+  flex: 1;
+}
+
+.speaker-name {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.speaker-section {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  gap: 12px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.speaker-image-container {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.speaker-placeholder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9ecef;
+  border-radius: 50%;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  color: #6c757d;
+}
+
+.speaker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.speaker-image.loaded {
+  opacity: 1;
+}
+
+.speaker-image.loaded:hover {
+  transform: scale(1.05);
+}
+
+.speaker-info {
+  flex: 1;
+}
+
+.speaker-name {
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.speaker-role {
+  color: #6c757d;
+  margin: 4px 0 0 0;
+  font-size: 0.9rem;
+}
+
+.capacity-bar {
+  position: relative;
+  height: 24px;
+  background: #e9ecef;
+  border-radius: 12px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.capacity-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  transition: width 0.6s ease-out;
+}
+
+.capacity-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.track-select {
+  background: white;
+  border: 2px solid #e9ecef;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.track-select:hover {
+  border-color: #007bff;
+}
+
+/* Fade in animation for session cards */
+.session-card {
+  animation: fadeIn 0.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth track filter transitions */
+.track-filter select {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.track-filter select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+/* Register button animations */
+.register-button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-button:not(:disabled):hover {
+  transform: scale(1.02);
+}
+
+.register-button:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+/* Capacity bar animation */
+.capacity-info {
+  position: relative;
+}
+
+.capacity-info::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  background: #007bff;
+  animation: capacityLoad 1s ease-out forwards;
+  width: 0;
+}
+
+@keyframes capacityLoad {
+  to {
+    width: 100%;
+  }
+}
+
+/* Grid layout transitions */
+.sessions-grid {
+  transition: grid-template-columns 0.3s ease;
+}
+
+/* Track tag pulse animation on hover */
+.track-tag {
+  transition: background-color 0.3s ease;
+}
+
+.track-tag:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .sessions-grid {
+    grid-template-columns: 1fr;
+  }
+}
